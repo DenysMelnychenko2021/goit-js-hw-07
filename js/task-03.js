@@ -12,3 +12,16 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryById = document.getElementById("gallery")
+console.log(galleryById)
+
+const addImages = images.map(({ url, alt }) => `<li><img src="${url}" alt="${alt}" width="400px"></li>`).join('')
+
+galleryById.insertAdjacentHTML("afterbegin", addImages)
+
+console.dir(gallery.style)
+gallery.style.listStyle = "none"
+gallery.style.display = "flex"
+gallery.style.justifyContent = "space-between"
+gallery.style.alignItems = "center"
